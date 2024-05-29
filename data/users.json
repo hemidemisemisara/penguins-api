@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "first-name": "Sara",
+    "last-name": "Chang",
+    "email": "hemidemisemisara@gmail.com",
+    "profile-photo": "http://localhost:8080/user-profiles/image-1",
+    "location": "Vancouver, Canada",
+    "timezone": "PST"
+  },
+  {
+    "id": 2,
+    "first-name": "Amanda",
+    "last-name": "Ourofino",
+    "email": "amanda@example.com",
+    "profile-photo": "http://localhost:8080/user-profiles/image-2",
+    "location": "Brasilia, Brazil",
+    "timezone": "BRT"
+  }
+]
