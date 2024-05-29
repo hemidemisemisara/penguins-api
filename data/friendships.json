@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "user-one": 1,
+    "user-two": 2,
+    "friends-since": "Apr 2024"
+  },
+  {
+    "id": 2,
+    "user-one": 1,
+    "user-two": 3,
+    "friends-since": "Oct 2018"
+  }
+]
