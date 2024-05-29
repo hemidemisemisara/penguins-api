@@ -7,6 +7,7 @@ const friendshipsRoutes = require("./routes/friendships-routes");
 require("dotenv").config();
 const { PORT, BACKEND_URL } = process.env;
 
+app.use(express.static("public"));
 app.use(express.json());
 app.use(cors());
 app.use("/friendships", friendshipsRoutes);

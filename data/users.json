@@ -4,7 +4,7 @@
     "first-name": "Sara",
     "last-name": "Chang",
     "email": "hemidemisemisara@gmail.com",
-    "profile-photo": "http://localhost:8080/user-profiles/image-1",
+    "profile-photo": "http://localhost:8080/images/user-profiles/user-1.png",
     "location": "Vancouver, Canada",
     "timezone": "PST"
   },
@@ -13,7 +13,7 @@
     "first-name": "Amanda",
     "last-name": "Ourofino",
     "email": "amanda@example.com",
-    "profile-photo": "http://localhost:8080/user-profiles/image-2",
+    "profile-photo": "http://localhost:8080/images/user-profiles/user-2.png",
     "location": "Brasilia, Brazil",
     "timezone": "BRT"
   }
