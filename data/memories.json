@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "friendship-id": 1,
+    "created-by": 1,
+    "date": "May 13 2024",
+    "title": "Amanda wearing Sara’s Sticker Tshirt",
+    "image": "http://localhost:8080/images/memories/memories-1.png"
+  },
+  {
+    "id": 2,
+    "friendship-id": 1,
+    "created-by": 1,
+    "date": "May 2 2024",
+    "title": "Sara’s Birthday Dinner",
+    "image": "http://localhost:8080/images/memories/memories-2.png"
+  },
+  {
+    "id": 3,
+    "friendship-id": 1,
+    "created-by": 1,
+    "date": "May 2 2024",
+    "title": "Lovely BD gift from Amanda",
+    "image": "http://localhost:8080/images/memories/memories-3.png"
+  },
+  {
+    "id": 4,
+    "friendship-id": 1,
+    "created-by": 1,
+    "date": "Mar 20 2024",
+    "title": "In Gas Town",
+    "image": "http://localhost:8080/images/memories/memories-4.png"
+  },
+  {
+    "id": 5,
+    "friendship-id": 1,
+    "created-by": 1,
+    "date": "Mar 20 2024",
+    "title": "Brunch at The Birds & Beets",
+    "image": "http://localhost:8080/images/memories/memories-5.png"
+  },
+  {
+    "id": 6,
+    "friendship-id": 1,
+    "created-by": 1,
+    "date": "Mar 10 2024",
+    "title": "Amanda’s Birthday Party",
+    "image": "http://localhost:8080/images/memories/memories-6.png"
+  },
+  {
+    "id": 7,
+    "friendship-id": 1,
+    "created-by": 1,
+    "date": "Jan 30 2024",
+    "title": "Yummy Lunch at Tenton",
+    "image": "http://localhost:8080/images/memories/memories-7.png"
+  },
+  {
+    "id": 8,
+    "friendship-id": 1,
+    "created-by": 1,
+    "date": "Jan 30 2024",
+    "title": "Yummy Lunch at Tenton",
+    "image": "http://localhost:8080/images/memories/memories-8.png"
+  },
+  {
+    "id": 9,
+    "friendship-id": 1,
+    "created-by": 1,
+    "date": "Jan 30 2024",
+    "title": "Sharing Punch Needles",
+    "image": "http://localhost:8080/images/memories/memories-9.png"
+  },
+  {
+    "id": 10,
+    "friendship-id": 1,
+    "created-by": 1,
+    "date": "Jan 23 2024",
+    "title": "Checking out Jarvis at Muji ",
+    "image": "http://localhost:8080/images/memories/memories-10.png"
+  },
+  {
+    "id": 11,
+    "friendship-id": 1,
+    "created-by": 1,
+    "date": "Nov 20 2023",
+    "title": "We love Randy's class",
+    "image": "http://localhost:8080/images/memories/memories-11.png"
+  },
+  {
+    "id": 12,
+    "friendship-id": 1,
+    "created-by": 1,
+    "date": "Nov 06 2024",
+    "title": "Killing Time at Emily Carr",
+    "image": "http://localhost:8080/images/memories/memories-12.png"
+  },
+  {
+    "id": 13,
+    "friendship-id": 1,
+    "created-by": 1,
+    "date": "Oct 24 2023",
+    "title": "The Hive proejct presentation",
+    "image": "http://localhost:8080/images/memories/memories-13.png"
+  },
+  {
+    "id": 14,
+    "friendship-id": 1,
+    "created-by": 1,
+    "date": "Aug 24 2023",
+    "title": "Yaletown Lunch",
+    "image": "http://localhost:8080/images/memories/memories-14.png"
+  },
+  {
+    "id": 15,
+    "friendship-id": 1,
+    "created-by": 1,
+    "date": "Aug 24 2024",
+    "title": "Ride in Sara’s New Car",
+    "image": "http://localhost:8080/images/memories/memories-15.png"
+  },
+  {
+    "id": 16,
+    "friendship-id": 1,
+    "created-by": 1,
+    "date": "",
+    "title": "",
+    "image": "http://localhost:8080/images/memories/memories-16.png"
+  },
+  {
+    "id": 17,
+    "friendship-id": 1,
+    "created-by": 1,
+    "date": "Aug 2 2024",
+    "title": "Crochet Workshop with Amanda",
+    "image": "http://localhost:8080/images/memories/memories-17.png"
+  },
+  {
+    "id": 18,
+    "friendship-id": 1,
+    "created-by": 1,
+    "date": "Aug 2 2024",
+    "title": "Of Course, we always need bubble tea",
+    "image": "http://localhost:8080/images/memories/memories-18.png"
+  }
+]

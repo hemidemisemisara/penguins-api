@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "friendship-id": 1,
+    "description": "love bubble tea"
+  },
+  {
+    "id": 2,
+    "friendship-id": 1,
+    "description": "love beautiful stuff"
+  },
+  {
+    "id": 3,
+    "friendship-id": 1,
+    "description": "enjoy healthy food"
+  },
+  {
+    "id": 4,
+    "friendship-id": 1,
+    "description": "lived in London before"
+  },
+  {
+    "id": 5,
+    "friendship-id": 1,
+    "description": "studied UX design"
+  }
+]
