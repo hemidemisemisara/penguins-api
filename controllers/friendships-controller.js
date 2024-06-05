@@ -61,7 +61,7 @@ function loadHowWhere(friendshipId) {
 
 const friendshipDetails = async (req, res) => {
   try {
-    const friendshipId = Number(req.params.id);
+    const friendshipId = req.params.id;
     const friendship = loadFriendship(friendshipId);
     const userOneId = friendship["user-one"];
     const userTwoId = friendship["user-two"];
