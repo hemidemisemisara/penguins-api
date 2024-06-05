@@ -84,7 +84,7 @@ const friendshipDetails = async (req, res) => {
       letters: letters,
       memories: memories,
       "things-in-common": thingsInCommon,
-      "first-impression": firstImpressions,
+      "first-impressions": firstImpressions,
       "how-where": howWhere,
     };
 
