@@ -74,21 +74,19 @@ const friendshipDetails = async (req, res) => {
     console.log("firstImpressions: ", firstImpressions);
     const howWhere = loadHowWhere(friendshipId);
 
-    const response = [
-      {
-        "friendship-id": friendshipId,
-        "user-1-first-name": userOne["first-name"],
-        "user-1-profile": userOne["profile-photo"],
-        "user-2-first-name": userTwo["first-name"],
-        "user-2-profile": userTwo["profile-photo"],
-        "friends-since": friendship["friends-since"],
-        letters: letters,
-        memories: memories,
-        "things-in-common": thingsInCommon,
-        "first-impression": firstImpressions,
-        "how-where": howWhere,
-      },
-    ];
+    const response = {
+      "friendship-id": friendshipId,
+      "user-1-first-name": userOne["first-name"],
+      "user-1-profile": userOne["profile-photo"],
+      "user-2-first-name": userTwo["first-name"],
+      "user-2-profile": userTwo["profile-photo"],
+      "friends-since": friendship["friends-since"],
+      letters: letters,
+      memories: memories,
+      "things-in-common": thingsInCommon,
+      "first-impression": firstImpressions,
+      "how-where": howWhere,
+    };
 
     res.json(response);
   } catch (error) {
