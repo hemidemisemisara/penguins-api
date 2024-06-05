@@ -61,7 +61,7 @@ function loadHowWhere(friendshipId) {
 
 const friendshipDetails = async (req, res) => {
   try {
-    const friendshipId = Number(req.params.id);
+    const friendshipId = req.params.id;
     const friendship = loadFriendship(friendshipId);
     const userOneId = friendship["user-one"];
     const userTwoId = friendship["user-two"];
@@ -71,20 +71,27 @@ const friendshipDetails = async (req, res) => {
     const memories = loadMemories(friendshipId);
     const thingsInCommon = loadThingsInCommon(friendshipId);
     const firstImpressions = loadFirstImpressions(friendshipId);
-    console.log("firstImpressions: ", firstImpressions);
     const howWhere = loadHowWhere(friendshipId);
 
     const response = {
       "friendship-id": friendshipId,
-      "user-1-first-name": userOne["first-name"],
-      "user-1-profile": userOne["profile-photo"],
-      "user-2-first-name": userTwo["first-name"],
-      "user-2-profile": userTwo["profile-photo"],
+      users: [
+        {
+          id: userOneId,
+          "first-name": userOne["first-name"],
+          profile: userOne["profile-photo"],
+        },
+        {
+          id: userTwoId,
+          "first-name": userTwo["first-name"],
+          profile: userTwo["profile-photo"],
+        },
+      ],
       "friends-since": friendship["friends-since"],
       letters: letters,
       memories: memories,
       "things-in-common": thingsInCommon,
-      "first-impression": firstImpressions,
+      "first-impressions": firstImpressions,
       "how-where": howWhere,
     };
 
