@@ -71,15 +71,22 @@ const friendshipDetails = async (req, res) => {
     const memories = loadMemories(friendshipId);
     const thingsInCommon = loadThingsInCommon(friendshipId);
     const firstImpressions = loadFirstImpressions(friendshipId);
-    console.log("firstImpressions: ", firstImpressions);
     const howWhere = loadHowWhere(friendshipId);
 
     const response = {
       "friendship-id": friendshipId,
-      "user-1-first-name": userOne["first-name"],
-      "user-1-profile": userOne["profile-photo"],
-      "user-2-first-name": userTwo["first-name"],
-      "user-2-profile": userTwo["profile-photo"],
+      users: [
+        {
+          "user-id": userOneId,
+          "user-first-name": userOne["first-name"],
+          "user-profile": userOne["profile-photo"],
+        },
+        {
+          "user-id": userTwoId,
+          "user-first-name": userTwo["first-name"],
+          "user-profile": userTwo["profile-photo"],
+        },
+      ],
       "friends-since": friendship["friends-since"],
       letters: letters,
       memories: memories,
