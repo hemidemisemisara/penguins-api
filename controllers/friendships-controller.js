@@ -77,14 +77,14 @@ const friendshipDetails = async (req, res) => {
       "friendship-id": friendshipId,
       users: [
         {
-          "user-id": userOneId,
-          "user-first-name": userOne["first-name"],
-          "user-profile": userOne["profile-photo"],
+          id: userOneId,
+          "first-name": userOne["first-name"],
+          profile: userOne["profile-photo"],
         },
         {
-          "user-id": userTwoId,
-          "user-first-name": userTwo["first-name"],
-          "user-profile": userTwo["profile-photo"],
+          id: userTwoId,
+          "first-name": userTwo["first-name"],
+          profile: userTwo["profile-photo"],
         },
       ],
       "friends-since": friendship["friends-since"],
