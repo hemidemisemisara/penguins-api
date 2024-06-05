@@ -4,13 +4,15 @@
     "friendship-id": 1,
     "created-by": 1,
     "description": "In the introduction over zoom at Emily Carr, you talked about one of your favorite movies being Back to the Future, at that time, I already thought I would like to be your friend!",
-    "image": "http://localhost:8080/images/first-impressions/first-impressions-1.png"
+    "image": "http://localhost:8080/images/first-impressions/first-impressions-1.png",
+    "image-title": "back to the future"
   },
   {
     "id": 2,
     "friendship-id": 1,
     "created-by": 2,
     "description": "I noticed in the UX design course that you have a really nice handwriting - I always make friends with people with good handwriting 😆",
-    "image": "http://localhost:8080/images/first-impressions/first-impressions-2.png"
+    "image": "http://localhost:8080/images/first-impressions/first-impressions-2.png",
+    "image-title": "good handwriting"
   }
 ]
