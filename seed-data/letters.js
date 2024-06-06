@@ -6,7 +6,7 @@ module.exports = [
     subject: "How is it going in Brasilia?",
     content:
       "Hey girl,\nHow is it going? Are you happy to be back? How is staying with your in-laws? Hope you’re doing well back in Brasilia. I look forward to see more photos from you!\nI’ve been thinking about my capstone project for the bootcamp, maybe I’ll do something like this to create friendship memories. Let me know what you think about this.\nMiss you xx\nSara",
-    timestamp: "May 15 2024",
+    timestamp: "2024-05-15 15:30",
     isRead: true,
   },
 ];

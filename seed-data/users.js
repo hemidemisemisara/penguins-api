@@ -17,4 +17,13 @@ module.exports = [
     location: "Brasilia, Brazil",
     timezone: "BRT",
   },
+  {
+    id: "419573ec-d276-4833-b1dd-399ef5c812b2",
+    "first-name": "Wanyu",
+    "last-name": "Chang",
+    email: "wanyu@example.com",
+    "profile-photo": "http://localhost:8080/images/user-profiles/user-2.png",
+    location: "Taipei, Taiwan",
+    timezone: "CST",
+  },
 ];

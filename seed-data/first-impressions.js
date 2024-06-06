@@ -14,7 +14,7 @@ module.exports = [
     "friendship-id": "27d0e85e-f594-4f6e-9bd9-c9bd894f53c9",
     "created-by": "d91d81a2-7887-42d7-a73a-6a9e63a22e68",
     description:
-      "I noticed in the UX design course that you have a really nice handwriting - I always make friends with people with good handwriting 😆",
+      "I noticed in the UX design course that you have a really nice handwriting - I always make friends with people with good handwriting!",
     image:
       "http://localhost:8080/images/first-impressions/first-impressions-2.png",
     "image-title": "good handwriting",
