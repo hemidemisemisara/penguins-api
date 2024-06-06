@@ -1,101 +1,127 @@
-const fs = require("fs");
+const knex = require("knex")(require("../knexfile"));
 
-function loadFriendship(friendshipId) {
-  const allfriendships = JSON.parse(fs.readFileSync("./data/friendships.json"));
-  const friendship = allfriendships.find(
-    (friendship) => friendship.id === friendshipId
-  );
-  return friendship;
+async function loadFriendship(friendshipId) {
+  try {
+    const allFriendships = await knex("friendships");
+    const friendship = allFriendships.find(
+      (friendship) => friendship.id === friendshipId
+    );
+    console.log(friendship);
+    return friendship;
+  } catch (error) {
+    console.error("error retrieving data from friendships", error);
+  }
 }
 
-function loadUser(userId) {
-  const allUsers = JSON.parse(fs.readFileSync("./data/users.json"));
-  const user = allUsers.find((user) => user.id === userId);
-  return user;
+async function loadUser(userId) {
+  try {
+    const allUsers = await knex("users");
+    const user = allUsers.find((user) => user.id === userId);
+    console.log("user:", user);
+    return user;
+  } catch (error) {
+    console.error("error retrieving data from users", error);
+  }
 }
 
-function loadLetters(friendshipId) {
-  const allLetters = JSON.parse(fs.readFileSync("./data/letters.json"));
-  const letters = allLetters.filter(
-    (letter) => letter["friendship-id"] === friendshipId
-  );
-  return letters;
+async function loadLetters(friendshipId) {
+  try {
+    const allLetters = await knex("letters");
+    const letters = allLetters.filter(
+      (letter) => letter["friendship-id"] === friendshipId
+    );
+    return letters;
+  } catch (error) {
+    console.error("error retrieving data from letters", error);
+  }
 }
 
-function loadMemories(friendshipId) {
-  const allMemories = JSON.parse(fs.readFileSync("./data/memories.json"));
-  const memories = allMemories.filter(
-    (letter) => letter["friendship-id"] === friendshipId
-  );
-  return memories;
+async function loadMemories(friendshipId) {
+  try {
+    const allMemories = await knex("memories");
+    const memories = allMemories.filter(
+      (letter) => letter["friendship-id"] === friendshipId
+    );
+    return memories;
+  } catch (error) {
+    console.error("error retrieving data from letters", error);
+  }
 }
 
-function loadThingsInCommon(friendshipId) {
-  const allThingsInCommon = JSON.parse(
-    fs.readFileSync("./data/things-in-common.json")
-  );
-  const thingsInCommon = allThingsInCommon.filter(
-    (thing) => thing["friendship-id"] === friendshipId
-  );
-  return thingsInCommon;
+async function loadThingsInCommon(friendshipId) {
+  try {
+    const allThingsInCommon = await knex("things-in-common");
+    const thingsInCommon = allThingsInCommon.filter(
+      (thing) => thing["friendship-id"] === friendshipId
+    );
+    return thingsInCommon;
+  } catch (error) {
+    console.error("error retrieving data from things-in-common", error);
+  }
 }
 
-function loadFirstImpressions(friendshipId) {
-  console.log("friendshipId: ", friendshipId);
-  const allFirstImpressions = JSON.parse(
-    fs.readFileSync("./data/first-impressions.json")
-  );
-  const firstImpressions = allFirstImpressions.filter(
-    (firstImpression) => firstImpression["friendship-id"] === friendshipId
-  );
-  return firstImpressions;
+async function loadFirstImpressions(friendshipId) {
+  try {
+    const allFirstImpressions = await knex("first-impressions");
+    const firstImpressions = allFirstImpressions.filter(
+      (firstImpression) => firstImpression["friendship-id"] === friendshipId
+    );
+    return firstImpressions;
+  } catch (error) {
+    console.error("error retrieving data from first-impressions", error);
+  }
 }
 
-function loadHowWhere(friendshipId) {
-  const howWheres = JSON.parse(fs.readFileSync("./data/how-where.json"));
-  const howWhere = howWheres.find(
-    (howWhere) => howWhere["friendship-id"] === friendshipId
-  );
-  return howWhere;
+async function loadHowWhere(friendshipId) {
+  try {
+    const howWheres = await knex("how-where");
+    const howWhere = howWheres.find(
+      (howWhere) => howWhere["friendship-id"] === friendshipId
+    );
+    return howWhere;
+  } catch (error) {
+    console.error("error retrieving data from how-where", error);
+  }
 }
 
 const friendshipDetails = async (req, res) => {
   try {
     const friendshipId = req.params.id;
-    const friendship = loadFriendship(friendshipId);
-    const userOneId = friendship["user-one"];
-    const userTwoId = friendship["user-two"];
-    const userOne = loadUser(userOneId);
-    const userTwo = loadUser(userTwoId);
-    const letters = loadLetters(friendshipId);
-    const memories = loadMemories(friendshipId);
-    const thingsInCommon = loadThingsInCommon(friendshipId);
-    const firstImpressions = loadFirstImpressions(friendshipId);
-    const howWhere = loadHowWhere(friendshipId);
+    const friendship = await loadFriendship(friendshipId);
+    if (friendship) {
+      const userOneId = friendship["user-one"];
+      const userTwoId = friendship["user-two"];
+      const userOne = await loadUser(userOneId);
+      const userTwo = await loadUser(userTwoId);
+      const letters = await loadLetters(friendshipId);
+      const memories = await loadMemories(friendshipId);
+      const thingsInCommon = await loadThingsInCommon(friendshipId);
+      const firstImpressions = await loadFirstImpressions(friendshipId);
+      const howWhere = await loadHowWhere(friendshipId);
 
-    const response = {
-      "friendship-id": friendshipId,
-      users: [
-        {
-          id: userOneId,
-          "first-name": userOne["first-name"],
-          profile: userOne["profile-photo"],
-        },
-        {
-          id: userTwoId,
-          "first-name": userTwo["first-name"],
-          profile: userTwo["profile-photo"],
-        },
-      ],
-      "friends-since": friendship["friends-since"],
-      letters: letters,
-      memories: memories,
-      "things-in-common": thingsInCommon,
-      "first-impressions": firstImpressions,
-      "how-where": howWhere,
-    };
-
-    res.json(response);
+      const response = {
+        "friendship-id": friendshipId,
+        users: [
+          {
+            id: userOneId,
+            "first-name": userOne["first-name"],
+            profile: userOne["profile-photo"],
+          },
+          {
+            id: userTwoId,
+            "first-name": userTwo["first-name"],
+            profile: userTwo["profile-photo"],
+          },
+        ],
+        "friends-since": friendship["friends-since"],
+        letters: letters,
+        memories: memories,
+        "things-in-common": thingsInCommon,
+        "first-impressions": firstImpressions,
+        "how-where": howWhere,
+      };
+      res.json(response);
+    }
   } catch (error) {
     res.status(500).json({ message: "Error retrieving friendship data" });
   }
