@@ -6,7 +6,7 @@ module.exports = [
     email: "hemidemisemisara@gmail.com",
     "profile-photo": "http://localhost:8080/images/user-profiles/user-1.png",
     location: "Vancouver, Canada",
-    timezone: "PST",
+    timezone: "America/Vancouver",
   },
   {
     id: "d91d81a2-7887-42d7-a73a-6a9e63a22e68",
@@ -15,7 +15,7 @@ module.exports = [
     email: "amanda@example.com",
     "profile-photo": "http://localhost:8080/images/user-profiles/user-2.png",
     location: "Brasilia, Brazil",
-    timezone: "BRT",
+    timezone: "America/Sao_Paulo",
   },
   {
     id: "419573ec-d276-4833-b1dd-399ef5c812b2",
@@ -24,6 +24,6 @@ module.exports = [
     email: "wanyu@example.com",
     "profile-photo": "http://localhost:8080/images/user-profiles/user-2.png",
     location: "Taipei, Taiwan",
-    timezone: "CST",
+    timezone: "Asia/Taipei",
   },
 ];
