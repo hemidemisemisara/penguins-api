@@ -2,23 +2,23 @@ const router = require("express").Router();
 const howWhereController = require("../controllers/how-where-controller");
 const upload = require("../config/multerConfig");
 
-// router.put("/:id", async (req, res, next) => {
-//   let date = Date.now();
-//   await upload("how-where", date).single("image")(req, res, next);
-//   await howWhereController.howWhereUpdate(req, res, date);
-// });
-
 router.put("/:id", async (req, res) => {
-  let date = Date.now();
-  await upload("how-where", date).single("image")(req, res, async (err) => {
-    if (err) {
-      // Handle Multer error
-      console.error(err);
-      return res.status(500).json({ message: "Error uploading file" });
+  // use timestamp for the image file name
+  let timestamp = Date.now();
+  //   upload photo to the public folder
+  await upload("how-where", timestamp).single("image")(
+    req,
+    res,
+    async (err) => {
+      // wait until the upload is completed, and if there is any error
+      if (err) {
+        console.error(err);
+        return res.status(500).json({ message: "Error uploading file" });
+      }
+      // move on to the controllerand update database's data
+      await howWhereController.howWhereUpdate(req, res);
     }
-    // Call the controller method after Multer finishes processing
-    await howWhereController.howWhereUpdate(req, res, date);
-  });
+  );
 });
 
 module.exports = router;

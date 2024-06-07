@@ -1,15 +1,15 @@
 const knex = require("knex")(require("../knexfile"));
-const path = require("path");
+// const path = require("path");
 
-const howWhereUpdate = async (req, res, timestamp) => {
+const howWhereUpdate = async (req, res) => {
   try {
-    console.log(req.body);
     const howWhereID = req.params.id;
     const { title, description } = req.body;
-    console.log("body", req.body);
-    console.log("title", title);
-    console.log("description", description);
-    const imageUrl = `http://localhost:8080/images/how-where/how-where-${timestamp}.jpg`;
+    const image = req.file;
+    const imageFileName = image.filename;
+    console.log("image", image);
+    console.log("imageFileName", imageFileName);
+    const imageUrl = `http://localhost:8080/images/how-where/${imageFileName}`;
     const data = await knex("how-where").where({ id: howWhereID }).update({
       image: imageUrl,
       description: description,
