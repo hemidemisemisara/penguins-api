@@ -3,6 +3,7 @@ const cors = require("cors");
 const app = express();
 const friendshipsRoutes = require("./routes/friendships-routes");
 const howWhereRoutes = require("./routes/how-where-routes");
+const firstImpressionRoutes = require("./routes/first-impression-routes");
 
 require("dotenv").config();
 const { PORT, BACKEND_URL } = process.env;
@@ -12,6 +13,7 @@ app.use(express.json());
 app.use(cors());
 app.use("/friendships", friendshipsRoutes);
 app.use("/how-where", howWhereRoutes);
+app.use("/first-impression", firstImpressionRoutes);
 
 app.get("/", (_req, res) => {
   res.send("Welcome to Penguins API ✨🐧✨");
