@@ -1,9 +1,10 @@
 const knex = require("knex")(require("../knexfile"));
+const fs = require("fs");
 
 const howWhereUpdate = async (req, res) => {
   try {
     const howWhereID = req.params.id;
-    const { title, description } = req.body;
+    const { title, description, originalFileName } = req.body;
 
     let updateData = {
       description: description,
@@ -14,6 +15,8 @@ const howWhereUpdate = async (req, res) => {
       const imageFileName = req.file.filename;
       const imageUrl = `http://localhost:8080/images/how-where/${imageFileName}`;
       updateData.image = imageUrl;
+      // remove the original image from the folder
+      fs.unlinkSync(`public/images/how-where/${originalFileName}`);
     }
 
     const data = await knex("how-where")
