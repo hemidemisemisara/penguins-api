@@ -6,7 +6,6 @@ async function loadFriendship(friendshipId) {
     const friendship = allFriendships.find(
       (friendship) => friendship.id === friendshipId
     );
-    console.log(friendship);
     return friendship;
   } catch (error) {
     console.error("error retrieving data from friendships", error);
@@ -17,7 +16,6 @@ async function loadUser(userId) {
   try {
     const allUsers = await knex("users");
     const user = allUsers.find((user) => user.id === userId);
-    console.log("user:", user);
     return user;
   } catch (error) {
     console.error("error retrieving data from users", error);
