@@ -7,6 +7,7 @@ const addThing = async (req, res) => {
     id: newThingID,
     "friendship-id": req.body["friendship-id"],
     description: req.body.description,
+    timestamp: Date.now(),
   };
   console.log(newThing);
   try {
