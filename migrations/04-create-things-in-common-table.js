@@ -3,6 +3,7 @@ exports.up = function (knex) {
     table.string("id").primary();
     table.string("friendship-id").notNullable();
     table.string("description").notNullable();
+    table.string("timestamp").notNullable();
     table
       .foreign("friendship-id")
       .references("id")

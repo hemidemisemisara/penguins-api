@@ -4,6 +4,7 @@ const app = express();
 const friendshipsRoutes = require("./routes/friendships-routes");
 const howWhereRoutes = require("./routes/how-where-routes");
 const firstImpressionRoutes = require("./routes/first-impression-routes");
+const thingsInCommonRoutes = require("./routes/things-in-common-routes");
 
 require("dotenv").config();
 const { PORT, BACKEND_URL } = process.env;
@@ -14,6 +15,7 @@ app.use(cors());
 app.use("/friendships", friendshipsRoutes);
 app.use("/how-where", howWhereRoutes);
 app.use("/first-impression", firstImpressionRoutes);
+app.use("/things-in-common", thingsInCommonRoutes);
 
 app.get("/", (_req, res) => {
   res.send("Welcome to Penguins API ✨🐧✨");
