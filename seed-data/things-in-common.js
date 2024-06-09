@@ -1,0 +1,32 @@
+module.exports = [
+  {
+    id: "5d2d376d-c720-4bcd-ada0-30c5e8b44c71",
+    "friendship-id": "27d0e85e-f594-4f6e-9bd9-c9bd894f53c9",
+    description: "love bubble tea",
+    timestamp: "1714685300",
+  },
+  {
+    id: "1f58835c-48ba-4394-a1e6-0f09989b7b12",
+    "friendship-id": "27d0e85e-f594-4f6e-9bd9-c9bd894f53c9",
+    description: "love beautiful stuff",
+    timestamp: "1714685301",
+  },
+  {
+    id: "41b0129a-cde3-475a-9c76-371befbb18ae",
+    "friendship-id": "27d0e85e-f594-4f6e-9bd9-c9bd894f53c9",
+    description: "enjoy healthy food",
+    timestamp: "1714685302",
+  },
+  {
+    id: "444208de-89c7-45a1-a53c-cb813157c225",
+    "friendship-id": "27d0e85e-f594-4f6e-9bd9-c9bd894f53c9",
+    description: "lived in London before",
+    timestamp: "1714685303",
+  },
+  {
+    id: "487e40b3-a1cc-4f37-9ff2-771937d2c3cb",
+    "friendship-id": "27d0e85e-f594-4f6e-9bd9-c9bd894f53c9",
+    description: "studied UX design",
+    timestamp: "1714685304",
+  },
+];
